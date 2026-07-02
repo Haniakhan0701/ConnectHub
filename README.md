@@ -14,4 +14,6 @@ A mini social media platform built with the MERN stack, featuring a live multi-p
 
 ### Ronin AI Agent
 <img width="433" height="495" alt="Screenshot (627)" src="https://github.com/user-attachments/assets/256d0d90-cf56-4675-b460-e6ab3e0767c5" />
+<img width="1177" height="638" alt="Screenshot (628)" src="https://github.com/user-attachments/assets/23465cd6-ed73-478f-af74-7b49cd61252e" />
+
 
