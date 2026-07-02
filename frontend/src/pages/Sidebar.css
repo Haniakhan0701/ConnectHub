@@ -1,0 +1,64 @@
+.ch-profile-menu-wrap {
+  position: relative;
+}
+
+.ch-rail-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ch-mini-profile-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.ch-profile-menu {
+  position: absolute;
+  bottom: 110%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--paper-dim, #e9e3d4);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px -12px rgba(15, 17, 21, 0.3);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.ch-profile-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink, #0f1115);
+  cursor: pointer;
+}
+
+.ch-profile-menu button:hover {
+  background: var(--paper-dim, #e9e3d4);
+}
+
+.ch-logout-btn {
+  border: 1.5px solid var(--paper-dim, #e9e3d4);
+  background: transparent;
+  color: var(--crimson, #c44e3f);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.55rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ch-logout-btn:hover {
+  background: var(--crimson, #c44e3f);
+  color: #fff;
+}

@@ -1,0 +1,130 @@
+.ch-settings-title {
+  margin: 0 0 0.2rem;
+  font-family: var(--display, "Sora", sans-serif);
+  font-size: 1.3rem;
+}
+
+.ch-settings-card {
+  background: var(--card, #fff);
+  border: 1px solid var(--paper-dim, #e9e3d4);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+}
+
+.ch-settings-card h3 {
+  margin: 0 0 0.8rem;
+  font-family: var(--display, "Sora", sans-serif);
+  font-size: 1rem;
+}
+
+.ch-settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--paper-dim, #e9e3d4);
+  font-size: 0.88rem;
+}
+
+.ch-settings-row:first-of-type {
+  border-top: none;
+}
+
+.ch-settings-value {
+  color: var(--text-dim, #6b675c);
+  font-family: var(--mono, monospace);
+  font-size: 0.82rem;
+}
+
+.ch-settings-hint {
+  font-size: 0.78rem;
+  color: var(--text-dim, #6b675c);
+  margin: 0.4rem 0 0;
+}
+
+.ch-toggle {
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  border: none;
+  background: var(--paper-dim, #e9e3d4);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  padding: 0;
+}
+
+.ch-toggle.on {
+  background: var(--crimson, #c44e3f);
+}
+
+.ch-toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s ease;
+}
+
+.ch-toggle.on .ch-toggle-knob {
+  transform: translateX(18px);
+}
+
+.ch-logout-full {
+  align-self: flex-start;
+  padding: 0.7rem 1.5rem;
+}
+
+.ch-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding-top: 0.6rem;
+}
+
+.ch-password-form .ch-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ch-password-form .ch-field span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim, #6b675c);
+}
+
+.ch-password-form .ch-field input {
+  border: 1.5px solid var(--paper-dim, #e9e3d4);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.ch-password-form .ch-field input:focus {
+  border-color: var(--crimson, #c44e3f);
+}
+
+.ch-error {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--crimson, #c44e3f);
+  background: rgba(196, 78, 63, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+}
+
+.ch-success {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #2e7d4f;
+  background: rgba(46, 125, 79, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+}

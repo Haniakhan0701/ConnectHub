@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
+
+/* ---- ConnectHub design tokens ---- */
+.ch-auth-page {
+  --ink: #0f1115;
+  --ink-soft: #171a20;
+  --paper: #f5f1e8;
+  --paper-dim: #e9e3d4;
+  --crimson: #c44e3f;
+  --gold: #c9a96a;
+  --text-dim: #a9a9ad;
+  --display: "Sora", sans-serif;
+  --body: "Inter", sans-serif;
+  --mono: "JetBrains Mono", monospace;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  min-height: 100vh;
+  font-family: var(--body);
+}
+
+@media (max-width: 900px) {
+  .ch-auth-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Left: ink hero with network canvas ---- */
+.ch-auth-hero {
+  position: relative;
+  background: radial-gradient(circle at 20% 20%, #171a20, var(--ink) 70%);
+  color: var(--paper);
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+}
+
+.ch-network-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ch-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(2rem, 6vw, 5rem);
+  max-width: 520px;
+}
+
+.ch-mark {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 2rem;
+}
+.ch-mark-ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--crimson);
+  border-radius: 50%;
+}
+.ch-mark-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ch-eyebrow {
+  font-family: var(--mono);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+
+.ch-hero-content h1 {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.12;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.ch-hero-content h1 em {
+  color: var(--crimson);
+  font-style: normal;
+}
+
+.ch-hero-sub {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 38ch;
+}
+
+/* ---- Right: paper form panel ---- */
+.ch-auth-panel {
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.ch-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: #fffdf9;
+  border: 1px solid var(--paper-dim);
+  border-radius: 18px;
+  padding: 2.5rem 2rem 2rem;
+  box-shadow: 0 30px 60px -25px rgba(15, 17, 21, 0.25);
+}
+
+.ch-seal {
+  position: absolute;
+  top: -18px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--crimson);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px -8px rgba(196, 78, 63, 0.6);
+  transform: rotate(3deg);
+}
+
+.ch-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--paper-dim);
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 1.75rem;
+}
+
+.ch-tabs button {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.55rem 0.5rem;
+  border-radius: 8px;
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #6b675c;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ch-tabs button.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.ch-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.ch-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ch-field span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b675c;
+  letter-spacing: 0.02em;
+}
+
+.ch-field input {
+  border: 1.5px solid var(--paper-dim);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.95rem;
+  font-family: var(--body);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ch-field input:focus {
+  border-color: var(--crimson);
+  box-shadow: 0 0 0 3px rgba(196, 78, 63, 0.12);
+}
+
+.ch-error {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--crimson);
+  background: rgba(196, 78, 63, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+}
+
+.ch-submit {
+  margin-top: 0.25rem;
+  border: none;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.ch-submit:hover:not(:disabled) {
+  background: var(--crimson);
+}
+
+.ch-submit:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ch-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ch-switch {
+  text-align: center;
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+  color: #6b675c;
+}
+
+.ch-switch button {
+  border: none;
+  background: none;
+  color: var(--crimson);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ch-network-canvas {
+    display: none;
+  }
+}
