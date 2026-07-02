@@ -5,10 +5,13 @@ A mini social media platform built with the MERN stack, featuring a live multi-p
 
 
 ### Feed
-![Feed page](./screenshots/feed.png)
+<img width="765" height="814" alt="Screenshot (625)" src="https://github.com/user-attachments/assets/b081c3db-bdaf-4717-8fb1-07625bcd6679" />
+
 
 ### Profile
-![Profile page](./screenshots/profile.png)
+<img width="1156" height="832" alt="Screenshot (626)" src="https://github.com/user-attachments/assets/8bc20fa8-7c5c-46bf-bac8-a51c92c00465" />
+
 
 ### Ronin AI Agent
-![Ronin responding](./screenshots/ronin.png)
+<img width="433" height="495" alt="Screenshot (627)" src="https://github.com/user-attachments/assets/256d0d90-cf56-4675-b460-e6ab3e0767c5" />
+
